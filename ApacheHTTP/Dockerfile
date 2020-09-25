@@ -80,6 +80,8 @@ RUN apt-get update && apt-get install -y \
 # Expose port
 EXPOSE 80
 
+WORKDIR /usr/local/sbin/
+
 # Start Apache Http Server
 CMD ["apachectl","-D", "FOREGROUND"]
 
